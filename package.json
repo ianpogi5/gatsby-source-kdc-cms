@@ -27,9 +27,11 @@
     "gatsby",
     "gatsby-plugin",
     "gatsby-source-plugin",
-    "kdccms"
+    "kdc-cms"
   ],
   "dependencies": {
+    "axios": "^0.19.0",
+    "babel-preset-env": "^1.7.0",
     "gatsby-node-helpers": "^0.3.0",
     "gatsby-source-filesystem": "^2.1.33",
     "lodash.capitalize": "^4.2.1"
