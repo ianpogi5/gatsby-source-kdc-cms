@@ -1,3 +1,5 @@
+import axios from "axios";
+
 module.exports = async ({
   apiURL,
   contentType,
@@ -17,15 +19,15 @@ module.exports = async ({
 
   reporter.info(`Starting to fetch data from KDC CMS - ${apiBase}`);
 
-  // Make API request.
-  const documents = await fetch(apiEndpoint, {
-    method: "GET",
+  const fetchRequestConfig = {
     headers: {
-      Authorization: "Bearer" + jwtToken,
+      Authorization: `Bearer ${jwtToken}`,
       Accept: "application/json"
     }
-  }).then(res => res.json());
+  };
+
+  const documents = await axios(apiEndpoint, fetchRequestConfig);
 
   // Map and clean data.
-  return documents.list;
+  return documents.data.list;
 };

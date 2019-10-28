@@ -4,7 +4,12 @@ import capitalize from "lodash.capitalize";
 
 exports.sourceNodes = async (
   { boundActionCreators, reporter },
-  { apiURL = "http://localhost:8101", contentTypes = [], jwtToken = {} }
+  {
+    apiURL = "http://localhost:8101",
+    contentTypes = [],
+    jwtToken = "",
+    queryLimit = 100
+  }
 ) => {
   const { createNode } = boundActionCreators;
 
@@ -24,6 +29,7 @@ exports.sourceNodes = async (
 
   // Execute the promises.
   let entities = await Promise.all(promises);
+
   contentTypes.forEach((contentType, i) => {
     const items = entities[i];
     items.forEach((item, i) => {
