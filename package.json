@@ -1,0 +1,42 @@
+{
+  "name": "gatsby-source-kdc-cms",
+  "version": "0.1.0",
+  "description": "Gatsby source plugin for building websites using KDC CMS as a data source",
+  "author": {
+    "name": "Ian Dela Cruz",
+    "email": "ian@kdcsoftware.com",
+    "url": "https://www.kdcsoftware.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ianpogi5/gatsby-source-kdc-cms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ianpogi5/gatsby-source-kdc-cms/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/ianpogi5/kdc-cms",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "babel src --out-dir .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write 'src/**/*.js'",
+    "watch": "babel -w src --out-dir ."
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source-plugin",
+    "kdccms"
+  ],
+  "dependencies": {
+    "gatsby-node-helpers": "^0.3.0",
+    "gatsby-source-filesystem": "^2.1.33",
+    "lodash.capitalize": "^4.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "babel-cli": "^6.26.0"
+  }
+}
