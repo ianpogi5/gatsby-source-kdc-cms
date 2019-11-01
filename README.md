@@ -44,3 +44,7 @@ You can query Document nodes created from your KDC CMS API like the following:
   }
 }
 ```
+
+## Example
+
+For full a working example using this plugin, see [gatsby-blog-kdc-cms](https://github.com/ianpogi5/gatsby-blog-kdc-cms)
