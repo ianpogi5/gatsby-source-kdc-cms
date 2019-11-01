@@ -1,6 +1,6 @@
 # gatsby-source-kdc-cms
 
-Source plugin for pulling documents into Gatsby from a KDC CMS API.
+Source plugin for pulling documents into Gatsby from a [KDC CMS](https://github.com/ianpogi5/kdc-cms) API.
 
 ## Install
 
