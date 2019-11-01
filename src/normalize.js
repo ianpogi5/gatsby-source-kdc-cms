@@ -18,8 +18,6 @@ const extractFields = async (
       field.hasOwnProperty("type") &&
       field.type === "image"
     ) {
-      console.log(field);
-
       let fileNodeID;
       // using field on the cache key for multiple image field
       const mediaDataCacheKey = `kdc-cms-media-${item.id}-${key}`;
@@ -31,7 +29,6 @@ const extractFields = async (
         fileNodeID = cacheMediaData.fileNodeID;
         touchNode({ nodeId: cacheMediaData.fileNodeID });
       }
-      console.log(fileNodeID);
 
       // If we don't have cached data, download the file
       if (!fileNodeID) {
@@ -48,8 +45,6 @@ const extractFields = async (
             createNodeId,
             auth
           });
-
-          console.log(fileNode);
 
           // If we don't have cached data, download the file
           if (fileNode) {
