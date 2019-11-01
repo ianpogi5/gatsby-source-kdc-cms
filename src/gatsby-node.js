@@ -1,9 +1,10 @@
 import fetchData from "./fetch";
 import { Node } from "./nodes";
 import capitalize from "lodash.capitalize";
+import normalize from "./normalize";
 
 exports.sourceNodes = async (
-  { boundActionCreators, reporter },
+  { store, boundActionCreators, reporter, createNodeId, cache },
   {
     apiURL = "http://localhost:8101",
     contentTypes = [],
@@ -11,7 +12,7 @@ exports.sourceNodes = async (
     queryLimit = 100
   }
 ) => {
-  const { createNode } = boundActionCreators;
+  const { createNode, touchNode } = boundActionCreators;
 
   const fetchActivity = reporter.activityTimer(`Fetched KDC CMS Data`);
   fetchActivity.start();
@@ -29,6 +30,17 @@ exports.sourceNodes = async (
 
   // Execute the promises.
   let entities = await Promise.all(promises);
+
+  entities = await normalize.downloadMediaFiles({
+    entities,
+    apiURL,
+    store,
+    cache,
+    createNode,
+    createNodeId,
+    touchNode,
+    jwtToken
+  });
 
   contentTypes.forEach((contentType, i) => {
     const items = entities[i];

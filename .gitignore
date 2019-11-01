@@ -3,3 +3,4 @@ node_modules
 /fetch.js
 /gatsby-node.js
 /nodes.js
+/normalize.js
