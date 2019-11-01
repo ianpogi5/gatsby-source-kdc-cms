@@ -1,5 +1,9 @@
 # gatsby-source-kdc-cms
 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/ianpogi5/gatsby-source-kdc-cms/issues)
+
+[![https://nodei.co/npm/gatsby-source-kdc-cms.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/gatsby-source-kdc-cms.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gatsby-source-kdc-cms)
+
 Source plugin for pulling documents into Gatsby from a [KDC CMS](https://github.com/ianpogi5/kdc-cms) API.
 
 ## Install
