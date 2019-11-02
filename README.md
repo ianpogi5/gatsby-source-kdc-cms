@@ -21,10 +21,10 @@ plugins: [
       apiURL: `http://localhost:8101`,
       queryLimit: 100, // Default to 100
       contentTypes: [`pages`, `blog`], // these are your content type id
-      jwtToken: process.env.KDC_CMS_TOKEN,
-    },
-  },
-]
+      jwtToken: process.env.KDC_CMS_TOKEN
+    }
+  }
+];
 ```
 
 ## How to query
@@ -33,12 +33,12 @@ You can query Document nodes created from your KDC CMS API like the following:
 
 ```graphql
 {
-  allKDCCMSBlogs {
+  allKdccmsBlog {
     edges {
       node {
         id
         title
-        content
+        subtitle
       }
     }
   }
@@ -47,4 +47,4 @@ You can query Document nodes created from your KDC CMS API like the following:
 
 ## Example
 
-For full a working example using this plugin, see [gatsby-blog-kdc-cms](https://github.com/ianpogi5/gatsby-blog-kdc-cms)
+For a full working example using this plugin, see [gatsby-blog-kdc-cms](https://github.com/ianpogi5/gatsby-blog-kdc-cms)
