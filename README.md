@@ -20,7 +20,7 @@ plugins: [
     options: {
       apiURL: `http://localhost:8101`,
       queryLimit: 100, // Default to 100
-      contentTypes: [`pages`, `blogs`],
+      contentTypes: [`pages`, `blog`], // these are your content type id
       jwtToken: process.env.KDC_CMS_TOKEN,
     },
   },
