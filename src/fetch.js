@@ -8,13 +8,7 @@ module.exports = async ({
   reporter
 }) => {
   // Define API endpoint.
-  let apiBase = `${apiURL}/`;
-  if (contentType === "pages") {
-    apiBase += "pages";
-  } else {
-    apiBase += `contents/${contentType}`;
-  }
-
+  const apiBase = `${apiURL}/${contentType}`;
   const apiEndpoint = `${apiBase}?limit=${queryLimit}`;
 
   reporter.info(`Starting to fetch data from KDC CMS - ${apiBase}`);
