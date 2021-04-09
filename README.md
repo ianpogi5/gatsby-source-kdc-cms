@@ -6,6 +6,8 @@
 
 Source plugin for pulling documents into Gatsby from a [KDC CMS](https://github.com/ianpogi5/kdc-cms) API.
 
+**Note: THIS PROJECT IS NOW DISCONTINUTED IN FAVOR OF [Abu CMS](https://github.com/kdcio/abu)!**
+
 ## Install
 
 `npm install --save gatsby-source-kdc-cms`
